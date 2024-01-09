@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var connStr = builder.Configuration.GetConnectionString("TransactionsDb8889104");
+var connStr = builder.Configuration.GetConnectionString("TransactionsDb");
 builder.Services.AddDbContext<TransactionContext>(options => options.UseSqlServer(connStr));
 
 builder.Services.AddIdentity<User, IdentityRole>(options => {
